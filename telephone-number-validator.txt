@@ -1,0 +1,10 @@
+let RE = /^(1\s?)?\d{3}-\d{3}-\d{4}$/;
+let RE2 = /^(1\s?)?\(\d{3}\)\s?\d{3}-\d{4}$/;
+let RE3 = /^(1\s?)?\d{3}\s?\d{3}\s?\d{4}$/;
+let RE4 = /^(1\s?)?\d{3}\s\d{3}\s\d{4}$/;
+
+function telephoneCheck(str) {
+  return RE.test(str) || RE2.test(str) || RE3.test(str) || RE4.test(str);
+}
+
+console.log(telephoneCheck("1 555 555 5555"));
